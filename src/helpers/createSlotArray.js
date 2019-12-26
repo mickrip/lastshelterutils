@@ -1,4 +1,5 @@
 import indexOf from "lodash/indexOf";
+import moment from "moment";
 
 const days = [
   "Monday",
@@ -10,18 +11,29 @@ const days = [
   "Sunday"
 ];
 
-const createSlotArray = (lsDay, slot, previousSlots = 0, futureSlots = 72) => {
+/*
+  Creates a list of slots (by default, it's the next 72)
+ */
+
+const createSlotArray = (lsDay, slot, previousSlots = 0, futureSlots = 140) => {
   const lsDayIndex = indexOf(days, lsDay);
   let slotArray = [];
+  const momentStartOfDay = moment()
+    .utc()
+    .startOf("day");
+
   for (let x = slot - previousSlots; x < slot + futureSlots; x++) {
-    const m = (x + 2400) % 24;
+    const m = (x + 4800) % 24;
     let test = Math.floor(x / 24);
     const realDayIndex = (lsDayIndex + test) % 7;
+
     slotArray.push({
       s: m,
       d: days[realDayIndex],
       offset: x,
-      dayIndex: realDayIndex
+      actualTime: moment(momentStartOfDay)
+        .add(x + 2, "hours")
+        .local()
     });
   }
 

@@ -15,10 +15,10 @@ const getLSTimeObject = () => {
 
   return {
     lsDay: lsTime.format("dddd"),
-    lsTime: lsTime.format("HH:mm:ss"),
+    lsTime: lsTime.format("HH:mm"),
     slot: parseInt(lsTime.format("H"), 10),
     localDay: localTime.format("dddd"),
-    localTime: localTime.format("HH:mm:ss"),
+    localTime: localTime.format("HH:mm"),
     timeDiff,
     timeDiffSuffix
   };

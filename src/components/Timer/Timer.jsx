@@ -25,7 +25,7 @@ const Timer = ({ timeObject }) => {
         <Info label="Game Time" value={`${lsDay} ${lsTime}`} />
         <Info
           label="Your Time"
-          value={`${localDay} ${localTime} (${timeDiff} hours ${timeDiffSuffix})`}
+          value={`${localDay} ${localTime} (${Math.abs(timeDiff)} hours ${timeDiffSuffix})`}
         />
       </TimerStyles>
     </>

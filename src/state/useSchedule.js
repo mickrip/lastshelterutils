@@ -13,7 +13,7 @@ export default () => {
     setTimeObject(getLSTimeObject());
     const timer = setInterval(() => {
       setTimeObject(getLSTimeObject());
-    }, 5000);
+    }, 30000);
     return () => clearInterval(timer);
   }, []);
 
