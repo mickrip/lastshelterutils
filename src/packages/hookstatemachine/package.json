@@ -1,0 +1,8 @@
+{
+  "name": "hookstatemachine",
+  "version": "0.0.1",
+  "description": "React Hook state machine",
+  "main": "src/index.js",
+  "author": "Mick Rippon",
+  "license": "MIT"
+}
