@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import getLSTimeObject from "./helpers/getLSTimeObject";
 import Home from "./components/Home/Home";
 import useSchedule from "./state/useSchedule";
 import AppStateWrapper from "./packages/hookstatemachine/src/AppStateWrapper";

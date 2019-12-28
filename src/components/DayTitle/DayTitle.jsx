@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import DayTitleStyles from "./DayTitleStyles.jsx";
 import { getDayDescription } from "../../helpers/translate";
+import { Container } from "react-awesome-styled-grid";
 
 const DayTitle = ({ day }) => {
   const dayDesc = getDayDescription(day);
   return (
     <>
       <DayTitleStyles>
-        <h2>
-          {day} - <small>{dayDesc}</small>
-        </h2>
+        <Container>
+          {day} <small>{dayDesc}</small>
+        </Container>
       </DayTitleStyles>
     </>
   );

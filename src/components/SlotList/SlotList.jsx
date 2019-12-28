@@ -3,24 +3,50 @@ import SlotListStyles from "./SlotListStyles.jsx";
 import Slot from "../Slot/Slot";
 import createSlotArray from "../../helpers/createSlotArray";
 import DayTitle from "../DayTitle/DayTitle";
+import StickyBox from "react-sticky-box";
+import { Container } from "react-awesome-styled-grid";
+
+const SlotsFromDay = ({ slots, dayOfWeek, currentDay, currentSlot }) => {
+  return (
+    <>
+      <StickyBox offsetTop={80}>
+        <DayTitle day={dayOfWeek} />
+      </StickyBox>
+      <Container>
+        {slots.map(({ s, d, actualTime }, key) => {
+          const isCurrent = currentDay === dayOfWeek && s === currentSlot;
+          return (
+            <div key={key}>
+              <Slot slot={s} day={d} current={isCurrent} time={actualTime} />
+            </div>
+          );
+        })}
+      </Container>
+    </>
+  );
+};
 
 const SlotList = ({ timeObject }) => {
   const { lsDay, slot } = timeObject;
-  const slots = createSlotArray(lsDay, slot);
-  let _lastDay = null;
+  const { daysOfWeek, slotArray } = createSlotArray(lsDay, slot);
+
   return (
     <>
       <SlotListStyles>
         <>
-          {slots.map(({ s, d, actualTime }, key) => {
-            const current = d === lsDay && slot === s;
-            const showDaytitle = _lastDay !== d;
-            _lastDay = d;
+          {daysOfWeek.map((dow, key) => {
+            const s = slotArray.filter(activity => {
+              return activity.d === dow;
+            });
+
             return (
-              <div key={key}>
-                {showDaytitle && <DayTitle day={d} />}
-                <Slot slot={s} day={d} current={current} time={actualTime} />
-              </div>
+              <SlotsFromDay
+                key={key}
+                dayOfWeek={dow}
+                slots={s}
+                currentDay={lsDay}
+                currentSlot={slot}
+              />
             );
           })}
         </>

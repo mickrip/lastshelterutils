@@ -1,3 +1,16 @@
+import {
+  faCoffee,
+  faBuilding,
+  faFlask,
+  faUserTie,
+  faStar,
+  faForward,
+  faTools,
+  faCube,
+  faIdBadge,
+  faBomb
+} from "@fortawesome/free-solid-svg-icons";
+
 export const days = {
   Monday: "Gathering Day",
   Tuesday: "Building Day",
@@ -8,22 +21,22 @@ export const days = {
   Sunday: "Kill Event Day"
 };
 
-const BUILDING = "building";
-const BUILDSU = "building speedups";
-const TRAINSU = "training speedups";
-const TROOPTRAIN = "raining troops";
-const VIP = "spend VIP points";
-const RESEARCHSU = "research speedups";
-const RESEARCH = "tech research";
-const CRAFT = "craft parts";
-const SPEEDUPS = "any speedups";
-const ECORE = "consume energy core";
-const HEROREC = "hero recruitment";
-const ZOMBIES = "kill zombies";
-const HERODEV = "all hero development";
-const WISDOMSPAQ = "spend or acquire wisdom medals";
-const WISDOMSP = "spend wisdom medals";
-const TECHSPEEDUPS = "tech speedups";
+const BUILDING = { name: "building", icon: faBuilding };
+const BUILDSU = { name: "building speedups", icon: faForward };
+const TRAINSU = { name: "training speedups", icon: faForward };
+const TROOPTRAIN = { name: "training troops", icon: faUserTie };
+const VIP = { name: "spend VIP points", icon: faStar };
+const RESEARCHSU = { name: "research speedups", icon: faForward };
+const RESEARCH = { name: "tech research", icon: faFlask };
+const CRAFT = { name: "craft parts", icon: faTools };
+const SPEEDUPS = { name: "any speedups", icon: faForward };
+const ECORE = { name: "consume energy core", icon: faCube };
+const HEROREC = { name: "hero recruitment", icon: faIdBadge };
+const ZOMBIES = { name: "kill zombies", icon: faBomb };
+const HERODEV = { name: "all hero development", icon: faCoffee };
+const WISDOMSPAQ = { name: "spend or acquire wisdom medals", icon: faCoffee };
+const WISDOMSP = { name: "spend wisdom medals", icon: faCoffee };
+const TECHSPEEDUPS = { name: "tech speedups", icon: faForward };
 
 export const slots = {
   Monday: [

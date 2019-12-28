@@ -37,7 +37,17 @@ const createSlotArray = (lsDay, slot, previousSlots = 0, futureSlots = 140) => {
     });
   }
 
-  return slotArray;
+  let lastDay = null;
+
+  const daysOfWeek = slotArray
+    .map(activity => {
+      const returnThis = activity.d !== lastDay ? activity.d : null;
+      lastDay = activity.d;
+      return returnThis;
+    })
+    .filter(x => x !== null);
+
+  return { daysOfWeek, slotArray };
 };
 
 export default createSlotArray;

@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 export default styled.div`
-  background: #eee;
-  padding: 8px;
+  background: #393e73;
+  color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
   .info {
     margin-bottom: 4px;
   }

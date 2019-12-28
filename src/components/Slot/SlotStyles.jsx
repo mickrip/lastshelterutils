@@ -9,6 +9,7 @@ export default styled.div`
     margin-bottom: 4px;
     width: 100%;
     font-weight: ${props => (props.current ? "bold" : "normal")};
+    color: ${props => (props.current ? "#218011" : "#2b6c80")};
     //width: 80px;
     margin-right: 8px;
     //text-align: right;
@@ -22,7 +23,7 @@ export default styled.div`
     padding: 4px 8px 0 8px;
     margin-right: 4px;
     color: ${props => (props.current ? "#eee" : "#333")};
-    background: ${props => (props.current ? "#333" : "#efefef")};
+    background: ${props => (props.current ? "#369c51" : "#efefef")};
     border: 1px solid #eee;
   }
 

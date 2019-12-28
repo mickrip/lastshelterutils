@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import SlotStyles from "./SlotStyles.jsx";
 import { getActivitiesByDayAndSlot } from "../../helpers/translate";
 import Cell from "../Cell/Cell";
+import ActivityIcon from "../ActivityIcon/ActivityIcon";
 
 const Slot = ({ day, slot, time, current }) => {
   const activity = getActivitiesByDayAndSlot(day, slot);
   const formattedDate = time.format("h:mma");
-
   return (
     <>
       <SlotStyles current={current}>
@@ -16,7 +16,8 @@ const Slot = ({ day, slot, time, current }) => {
             {activity.map((s, key) => {
               return (
                 <Cell className="activity" key={key}>
-                  {s}
+                  <ActivityIcon icon={s.icon} />
+                  {s.name}
                 </Cell>
               );
             })}
@@ -28,3 +29,7 @@ const Slot = ({ day, slot, time, current }) => {
 };
 
 export default Slot;
+
+/*
+
+ */

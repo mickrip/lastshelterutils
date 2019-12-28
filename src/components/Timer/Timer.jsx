@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TimerStyles from "./TimerStyles.jsx";
+import { Container } from "react-awesome-styled-grid";
+import StickyBox from "react-sticky-box";
 
 const Info = ({ label, value }) => {
   return (
@@ -21,13 +23,19 @@ const Timer = ({ timeObject }) => {
   } = timeObject;
   return (
     <>
-      <TimerStyles>
-        <Info label="Game Time" value={`${lsDay} ${lsTime}`} />
-        <Info
-          label="Your Time"
-          value={`${localDay} ${localTime} (${Math.abs(timeDiff)} hours ${timeDiffSuffix})`}
-        />
-      </TimerStyles>
+      <StickyBox>
+        <TimerStyles>
+          <Container>
+            <Info label="Game Time" value={`${lsDay} ${lsTime}`} />
+            <Info
+              label="Your Time"
+              value={`${localDay} ${localTime} (${Math.abs(
+                timeDiff
+              )} hours ${timeDiffSuffix})`}
+            />
+          </Container>
+        </TimerStyles>
+      </StickyBox>
     </>
   );
 };
