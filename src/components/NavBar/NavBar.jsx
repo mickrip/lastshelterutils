@@ -8,7 +8,7 @@ import Modal from "react-responsive-modal";
 import Info from "../Info/Info";
 
 const NavBar = () => {
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
 
   const closeModal = () => {
     setOpenModal(false);
