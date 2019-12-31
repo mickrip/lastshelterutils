@@ -24,10 +24,11 @@ export const BaseSelectModalStyle = styled.div`
     margin-top: 36px;
   }
   .baselevel-select {
+    font-size: 15px;
     &:hover {
       color: red;
       cursor: pointer;
     }
-    line-height: 25px;
+    line-height: 32px;
   }
 `;
