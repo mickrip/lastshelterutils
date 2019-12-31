@@ -3,9 +3,10 @@ import NavBarStyles from "./NavBarStyles.jsx";
 import { Col, Container, Row } from "react-awesome-styled-grid";
 import titleimg from "./title.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-responsive-modal";
 import Info from "../Info/Info";
+import BaseSelect from "../../BaseSelect/BaseSelect";
 
 const NavBar = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -42,6 +43,13 @@ const NavBar = () => {
                 >
                   <FontAwesomeIcon icon={faInfoCircle} /> About
                 </button>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="base-select-container">
+                <BaseSelect />
               </div>
             </Col>
           </Row>

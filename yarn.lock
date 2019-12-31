@@ -8531,6 +8531,13 @@ react-responsive-modal@^4.0.1:
     prop-types "^15.6.2"
     react-transition-group "^4.0.0"
 
+react-responsive-select@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-responsive-select/-/react-responsive-select-5.1.0.tgz#3904fce172ab404100ce5fff8258b9629e72e008"
+  integrity sha512-E4ec4eKHa7RRNweXAnl/oEJbvFm2f02eIqAxN/bJyxacRkCJBylhoYGm7P9wbJEvi6ctsCaKcf2SeAf5DLUS8w==
+  dependencies:
+    singleline-next "^2.0.0"
+
 react-scripts@3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.3.0.tgz#f26a21f208f20bd04770f43e50b5bbc151920c2a"
@@ -9307,6 +9314,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+singleline-next@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/singleline-next/-/singleline-next-2.0.0.tgz#5a8d00e6a6cb19f94d25e6dc94a47687b5916a9f"
+  integrity sha512-cCN9bNJw32R1yPj2Y/BIni+6zNo/v0U7yj4YBpX+bt17GJK8qshjiZzDRTQnvYO/uXk/aosG6YlggYrDsQxDmQ==
 
 sisteransi@^1.0.3:
   version "1.0.4"

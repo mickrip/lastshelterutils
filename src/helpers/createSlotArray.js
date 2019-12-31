@@ -30,6 +30,7 @@ const createSlotArray = (lsDay, slot, previousSlots = 0, futureSlots = 140) => {
     slotArray.push({
       s: m,
       d: days[realDayIndex],
+      dayIndex: realDayIndex,
       offset: x,
       actualTime: moment(momentStartOfDay)
         .add(x + 2, "hours")
@@ -38,16 +39,20 @@ const createSlotArray = (lsDay, slot, previousSlots = 0, futureSlots = 140) => {
   }
 
   let lastDay = null;
-
+  let dayIndexes = [];
   const daysOfWeek = slotArray
     .map(activity => {
       const returnThis = activity.d !== lastDay ? activity.d : null;
+      const returnDayIndex = activity.d !== lastDay ? activity.dayIndex : null;
+      dayIndexes.push(returnDayIndex);
       lastDay = activity.d;
       return returnThis;
     })
     .filter(x => x !== null);
 
-  return { daysOfWeek, slotArray };
+  dayIndexes = dayIndexes.filter(x => x !== null);
+
+  return { daysOfWeek, slotArray, dayIndexes };
 };
 
 export default createSlotArray;

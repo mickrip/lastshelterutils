@@ -2,5 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export default styled.div`
-  display: inline-block;
+  vertical-align: top;
+
+  display: ${props => (props.block ? "block" : "inline-block")};
 `;

@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default () => {
-  const [showInfo, setShowInfo] = useState(false);
+  const [baseLevel, setBaseLevel] = useState(25);
+
+  useEffect(() => {
+    //console.log("BR changed", baseLevel);
+  }, [baseLevel]);
+
   return {
-    showInfo,
-    setShowInfo
+    baseLevel,
+    setBaseLevel
   };
 };

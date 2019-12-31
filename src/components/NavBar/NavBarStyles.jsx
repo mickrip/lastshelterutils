@@ -49,4 +49,10 @@ export default styled.div`
     font-size: 14px;
     color: pink;
   }
+
+  .base-select-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
 `;
