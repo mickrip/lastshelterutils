@@ -3,8 +3,7 @@ import InfoStyles from "./InfoStyles.jsx";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Modal from "react-responsive-modal";
-const appGamerUrl =
-  "https://www.appgamer.com/last-shelter-survival/strategy-guide/daily-challenges-schedule";
+const lssURL = "http://www.lssnfo.com/";
 const ghUrl = "https://github.com/mickrip/lastshelterutils";
 const twUrl = "https://twitter.com/mickrippon";
 const Info = () => {
@@ -31,9 +30,10 @@ const Info = () => {
         <hr />
         <p>
           Schedule data taken from{" "}
-          <a href={appGamerUrl} target="_blank">
-            appgamer.com
-          </a>
+          <a href={lssURL} target="_blank">
+            www.lssnfo.com
+          </a>{" "}
+          (many thanks, how do I contact you?)
         </p>
       </InfoStyles>
     </>

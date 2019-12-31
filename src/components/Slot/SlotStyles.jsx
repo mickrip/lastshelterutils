@@ -17,23 +17,25 @@ export default styled.div`
   }
 
   .activity {
-    line-height: 18px;
-    font-size: 80%;
+    line-height: 21px;
+    font-size: 13px;
     flex-wrap: nowrap;
     border-radius: 4px;
     padding: 4px 8px 0 8px;
-    margin-right: 4px;
+    margin-right: 1px;
     color: ${props => (props.current ? "#eee" : "#eee")};
     background: ${props => (props.current ? "#369c51" : "#485e9e")};
     border: 1px solid #eee;
+    flex-wrap: nowrap;
+    white-space: nowrap;
   }
 
   .activity-cell {
     font-weight: bold;
     margin-bottom: 12px;
     text-transform: uppercase;
-    display: flex;
-    flex-wrap: nowrap;
+
+    white-space: normal;
   }
 `;
 
