@@ -38,19 +38,18 @@ const BaseSelect = () => {
           <BaseSelectModalStyle>
             <h2>What's your Base Level?</h2>
 
-            {opts.map(opt => {
+            {opts.map((opt, key) => {
               return (
-                <>
-                  <div
-                    className="baselevel-select"
-                    onClick={() => {
-                      setBaseLevel(opt.value);
-                      closeModal();
-                    }}
-                  >
-                    Level {opt.text}
-                  </div>
-                </>
+                <div
+                  key={key}
+                  className="baselevel-select"
+                  onClick={() => {
+                    setBaseLevel(opt.value);
+                    closeModal();
+                  }}
+                >
+                  Level {opt.text}
+                </div>
               );
             })}
           </BaseSelectModalStyle>

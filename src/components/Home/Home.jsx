@@ -7,6 +7,8 @@ import SlotList from "../SlotList/SlotList";
 
 const Home = () => {
   const { timeObject, isReady } = useAppState("schedule");
+  const { isReady: appIsReady } = useAppState("app");
+  if (appIsReady === false) return null;
   if (isReady === false) return null;
   return (
     <>

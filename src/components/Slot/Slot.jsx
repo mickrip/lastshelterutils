@@ -6,6 +6,7 @@ import ActivityIcon from "../ActivityIcon/ActivityIcon";
 import { RewardStyles } from "./SlotStyles";
 import StickyBox from "react-sticky-box";
 import { Container } from "react-awesome-styled-grid";
+import typeToIcon from "../../helpers/typeToIcon";
 
 const Rewards = ({ label, rewards, tierPoint, className }) => {
   return (
@@ -29,25 +30,23 @@ const Rewards = ({ label, rewards, tierPoint, className }) => {
 };
 
 const Slot = ({ data, time, current }) => {
-  //const activity = getActivitiesByDayAndSlot(day, slot);
   const formattedDate = time.format("h:mma");
-
   const { rewards, tierPoints, objectives } = data;
 
   return (
     <>
       <SlotStyles current={current}>
         <>
-          <StickyBox offsetTop={120}>
-            <div className="time">
-              <Container>{formattedDate}</Container>
-            </div>
-          </StickyBox>
+          <div className="time">
+            <Container>{formattedDate}</Container>
+          </div>
+
           <Container>
             <Cell className="activity-cell">
               {objectives.map((objective, key) => {
                 return (
                   <Cell className="activity" key={key}>
+                    <ActivityIcon icon={typeToIcon(objective.type)} />
                     {objective.name}
                   </Cell>
                 );

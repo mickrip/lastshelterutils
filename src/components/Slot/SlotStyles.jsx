@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export default styled.div`
+  background: ${props => (props.current ? "#f9f9f9" : "white")};
   .time {
     background: #6e7a9c;
 
@@ -44,7 +45,7 @@ export const RewardStyles = styled.div`
 
   .t1 {
     .reward-item {
-      background: #d9eaf9;
+      //background: #d9eaf9;
     }
     .reward-label {
       color: #14355b;
@@ -53,7 +54,7 @@ export const RewardStyles = styled.div`
 
   .t2 {
     .reward-item {
-      background: #f9f0f3;
+      //background: #f9f0f3;
     }
     .reward-label {
       color: #470423;
@@ -62,7 +63,7 @@ export const RewardStyles = styled.div`
 
   .t3 {
     .reward-item {
-      background: #f4f0e7;
+      //background: #f4f0e7;
     }
     .reward-label {
       color: #4d4e1d;
@@ -72,13 +73,17 @@ export const RewardStyles = styled.div`
   .reward-list {
     padding: 4px 0;
     .reward-item {
+      display: inline-block;
+      margin: 2px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
       line-height: 18px;
       font-size: 90%;
-      flex-wrap: nowrap;
-      border-radius: 4px;
+      background: white;
+      //border-radius: 4px;
       padding: 4px 8px;
 
-      border: 1px solid #fff;
+      border-right: 1px solid #ddd;
     }
   }
 `;
