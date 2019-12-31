@@ -12,6 +12,9 @@ font-family: 'Roboto', sans-serif;
         * {
     box-sizing: border-box;
     }
+     .custom-modal {
+    min-width: 200px;
+  }
     
 `;
 

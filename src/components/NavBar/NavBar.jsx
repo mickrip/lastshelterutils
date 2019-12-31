@@ -18,7 +18,13 @@ const NavBar = () => {
   return (
     <>
       <NavBarStyles>
-        <Modal open={openModal} onClose={closeModal} center>
+        <Modal
+          open={openModal}
+          onClose={closeModal}
+          center
+          closeIconSize={20}
+          classNames={{ modal: "custom-modal" }}
+        >
           <Info />
         </Modal>
         <Container>

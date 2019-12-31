@@ -13,7 +13,7 @@ export default styled.div`
     color: #282c34;
     font-size: 25px;
     padding: 0;
-    margin: 0;
+    margin: 30px 0 0 0;
     min-width: 400px;
   }
 

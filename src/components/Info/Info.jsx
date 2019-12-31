@@ -32,8 +32,8 @@ const Info = () => {
           Schedule data taken from{" "}
           <a href={lssURL} target="_blank">
             www.lssnfo.com
-          </a>{" "}
-          (many thanks, how do I contact you?)
+          </a>
+          <div>(many thanks, how do I contact you?)</div>
         </p>
       </InfoStyles>
     </>
